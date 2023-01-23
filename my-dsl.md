@@ -49,7 +49,9 @@ _Is the language implemented as an internal or external DSL?
 Justify your answer._
 
 Internal, because the components of the DSL are C++ classes, so all of the
-internal Hipacc code is also valid code in C++, the general purpose language. 
+internal Hipacc code is also valid code in C++, the general purpose language.
+This aligns with Fowler's definition that an internal DSL is valid in its
+general-purpose language.
 
 # Host language
 
@@ -72,4 +74,5 @@ _Identify one potential drawback of the DSL: what does a programmer
 lose by using this DSL instead of a general-purpose language?_
 
 The programmer looses ability to see the underlying data structure of the image
-while coding the algorithm. The data structure is dependant on the hardware.
+while coding the algorithm. The data structure is dependant on the hardware, and
+is thus decided by Hipacc.
