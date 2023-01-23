@@ -1,0 +1,32 @@
+startshape HOUSE
+
+shape HOUSE
+{
+  // Create the base of the house.
+  SQUARE [ y 0.21 ]
+  TRIANGLE [ y 1 ]
+  
+  // Create the windows in the house.
+  CIRCLE [ y 1 b 1 s 0.3 ]
+  SQUARE [ y 0 x 0.25 b 1 s 0.25 ]
+  SQUARE [ y 0.4 x 0.25 b 1 s 0.25 ]
+  SQUARE [ y 0.4 x -0.25 b 1 s 0.25 ]
+  
+  // Create the door.
+  SQUARE [ y 0 x -0.25 b 0.75 s 0.25 ]
+  SQUARE [ y -0.17 x -0.25 b 0.75 s 0.25 ]
+  
+  // Create the stairs.
+  STAIRS [ y -0.3 x -0.31 size 0.13 b 0.3 ]
+  
+  // Recurse with the house.
+  HOUSE [ y 0.2 x 2.5 rotate -30 size 0.8 ]
+}
+
+shape STAIRS
+{
+  SQUARE [ ]
+  SQUARE [ x 1 ]
+  
+  STAIRS [ y -0.75 x -0.3 rotate -3 size 0.9]
+}
